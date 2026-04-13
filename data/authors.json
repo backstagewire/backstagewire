@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "rory-reed",
+    "name": "Rory Reed",
+    "role": "Editor",
+    "bio": "Rory Reed leads Backstage Wire's coverage of breaking music news, major artist announcements, and the pop-culture moments shaping the industry.",
+    "sections": ["latest", "industry", "culture"]
+  },
+  {
+    "slug": "jamie-calder",
+    "name": "Jamie Calder",
+    "role": "Staff Writer",
+    "bio": "Jamie Calder covers emerging artists, underground scenes, and the indie bands worth knowing before they break wide.",
+    "sections": ["indie-radar"]
+  },
+  {
+    "slug": "alex-mercer",
+    "name": "Alex Mercer",
+    "role": "Staff Writer",
+    "bio": "Alex Mercer reports on tour announcements, festival lineups, live-music trends, and the stories shaping concert season.",
+    "sections": ["tour-festival"]
+  },
+  {
+    "slug": "jordan-vale",
+    "name": "Jordan Vale",
+    "role": "Culture Writer",
+    "bio": "Jordan Vale covers the intersection of music and pop culture, from film and TV crossovers to fashion, awards, and viral moments.",
+    "sections": ["culture"]
+  },
+  {
+    "slug": "casey-monroe",
+    "name": "Casey Monroe",
+    "role": "Music Writer",
+    "bio": "Casey Monroe writes about new releases, standout singles, albums, and the artists pushing new sounds forward.",
+    "sections": ["new-music"]
+  }
+]
