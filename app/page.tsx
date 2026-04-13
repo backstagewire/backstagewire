@@ -84,14 +84,29 @@ const trendingArtists = [
 
 function StoryCard({ story }: { story: Story }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
-      <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">
-        {story.category}
-      </p>
-      <h3 className="mt-3 text-xl font-semibold leading-tight text-white">
-        {story.title}
-      </h3>
-      <p className="mt-3 text-sm leading-7 text-white/70">{story.excerpt}</p>
+    <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:bg-white/10">
+
+      {/* IMAGE */}
+      <div
+        className="h-48 w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${story.image})` }}
+      />
+
+      {/* TEXT */}
+      <div className="p-5">
+        <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">
+          {story.category}
+        </p>
+
+        <h3 className="mt-3 text-xl font-semibold leading-tight text-white">
+          {story.title}
+        </h3>
+
+        <p className="mt-3 text-sm leading-7 text-white/70">
+          {story.excerpt}
+        </p>
+      </div>
+
     </article>
   );
 }
