@@ -73,3 +73,5 @@ This project is designed for **source-linked briefs**, not fabricated gossip. Th
 - Live stories use the image returned by the source feed when one is available.
 - If a source article has no usable image, the site automatically falls back to section-matched editorial artwork in `public/images/`.
 - Author pages use the included vector avatars in `public/authors/`.
+
+Backstage Wire build update
