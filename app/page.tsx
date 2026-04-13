@@ -137,40 +137,30 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(139,92,246,0.18),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(236,72,153,0.14),_transparent_24%),linear-gradient(to_bottom,_#050816,_#090d18,_#050816)] text-white">
       <section className="mx-auto max-w-7xl px-6 py-14">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
-          <article className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-            <div className="h-[320px] bg-[linear-gradient(135deg,rgba(124,58,237,.55),rgba(236,72,153,.35),rgba(0,0,0,.15))]" />
-            <div className="p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-fuchsia-300">
-                Featured Story
-              </p>
-              <h1 className="mt-4 max-w-3xl text-5xl font-bold leading-tight">
-                Backstage Wire Tracks the Artists, Releases, and Cultural Moments Worth Watching
-              </h1>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-white/75">
-                Music-first coverage with room for indie discovery, major releases, festival movement,
-                and the pop-culture stories shaping the conversation.
-              </p>
+       <div
+  className="relative h-[420px] bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=2000&q=80)"
+  }}
+>
+  <div className="absolute inset-0 bg-black/50" />
 
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">
-                    Lead
-                  </p>
-                  <h3 className="mt-2 text-xl font-semibold">
-                    Richmond’s Indie Scene Is Quietly Exploding
-                  </h3>
-                </div>
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">
-                    New Music
-                  </p>
-                  <h3 className="mt-2 text-xl font-semibold">
-                    The Releases Defining This Week
-                  </h3>
-                </div>
-              </div>
-            </div>
+  <div className="absolute bottom-0 left-0 p-8">
+    <p className="text-xs uppercase tracking-[0.25em] text-fuchsia-300">
+      Featured Story
+    </p>
+
+    <h1 className="mt-4 text-5xl font-bold leading-tight">
+      Backstage Wire Tracks the Artists, Releases, and Cultural Moments Worth Watching
+    </h1>
+
+    <p className="mt-4 max-w-2xl text-lg text-white/80">
+      Music-first coverage with room for indie discovery, major releases,
+      festival movement, and the pop-culture stories shaping the conversation.
+    </p>
+  </div>
+</div>
           </article>
 
           <aside className="space-y-5">
