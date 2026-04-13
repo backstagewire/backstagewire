@@ -1,68 +1,21 @@
-# Backstage Wire
-
-A Next.js starter for a music-first news site that also covers the pop-culture moments around artists. It pulls live source coverage, creates short AI-written briefs with source attribution, assigns those stories to sections, and rotates them across a small contributor roster.
-
-## What this build includes
-
-- Backstage Wire branding and homepage layout
-- Sections for Latest, Indie Radar, Tour & Festival, New Music, and Culture
-- Five contributor bylines, including Rory Reed as editor
-- Author pages, section pages, article pages, and topic pages
-- AI generation prompt tuned for music news plus relevant culture crossover
-- Vercel Blob storage for generated JSON articles
-- Cron endpoint for automatic refreshes on Vercel
-- Fallback sample content so the site still renders before the first cron run
-- Sitemap and robots files for easier indexing setup
-
-## Best hosting option
-
-This project is built for **Vercel** because it uses Next.js server routes and scheduled jobs. It is not directly compatible with Blogger.
-
-## Setup
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Copy `.env.example` to `.env.local`.
-3. Add your API keys and tokens.
-4. Start the app:
-
-```bash
-npm run dev
-```
-
-5. Open `http://localhost:3000`.
-6. Trigger the first article batch:
-
-```bash
-curl -H "Authorization: Bearer YOUR_CRON_SECRET" http://localhost:3000/api/cron
-```
-
-## Environment variables
-
-- `OPENAI_API_KEY`
-- `NEWS_API_KEY`
-- `CRON_SECRET`
-- `BLOB_READ_WRITE_TOKEN`
-- `NEXT_PUBLIC_SITE_URL`
-- `NEWS_QUERY`
-- `NEWS_LANGUAGE`
-- `NEWS_PAGE_SIZE`
-- `OPENAI_MODEL`
-
-## Suggested launch checklist
-
-- connect the repo to Vercel
-- set all environment variables in Vercel
-- add your custom domain
-- set `NEXT_PUBLIC_SITE_URL` to your live domain
-- test `/api/cron`
-- submit your sitemap in Google Search Console
-- replace placeholder sample stories after the first successful run
-
-## Editorial guardrails
-
-This project is designed for **source-linked briefs**, not fabricated gossip. The model prompt tells the AI not to invent rumors, quotes, allegations, or unsupported facts. Keep those rules in place.
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7b61ff"/>
+      <stop offset="55%" stop-color="#171923"/>
+      <stop offset="100%" stop-color="#ff4fa4"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0.2" cy="0.2" r="0.9">
+      <stop offset="0%" stop-color="#4ed0ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4ed0ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#r)"/>
+  <g opacity="0.18" stroke="#fff"><path d="M0 760h1600M0 680h1600M0 600h1600M200 0v900M380 0v900M560 0v900M740 0v900M920 0v900M1100 0v900M1280 0v900"/></g>
+  <rect x="72" y="72" width="1456" height="756" rx="32" fill="rgba(0,0,0,0.16)" stroke="rgba(255,255,255,0.18)"/>
+  <text x="110" y="180" fill="#f7f7fb" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="8">BACKSTAGE WIRE</text>
+  <text x="110" y="370" fill="#f7f7fb" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="900" letter-spacing="2">PRE-FESTIVAL</text>
+  <text x="110" y="490" fill="#f7f7fb" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="900" letter-spacing="2">BUZZ</text>
+  <text x="110" y="760" fill="#e7e7f3" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="3">MUSIC NEWS AND THE CULTURE AROUND IT</text>
+</svg>
