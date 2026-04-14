@@ -1,8 +1,9 @@
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata = {
   title: "Backstage Wire",
-  description: "Music culture from the other side of the curtain",
+  description: "Music culture from the other side of the curtain.",
 };
 
 const tickerItems = [
@@ -18,69 +19,76 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const repeatedTicker = [...tickerItems, ...tickerItems];
+  const repeated = [...tickerItems, ...tickerItems];
 
   return (
     <html lang="en">
-      <body className="bg-[#050816] text-white">
-        <div className="w-full overflow-hidden border-b border-white/10 bg-black text-white">
-          <div className="animate-marquee flex min-w-max items-center py-1 text-[11px] text-white/60">
+      <body className="bg-[#070914] text-white antialiased">
+        <div className="overflow-hidden border-b border-white/10 bg-[#05070f]">
+          <div className="animate-marquee flex min-w-max items-center py-2 text-[12px] uppercase tracking-[0.18em] text-white/70">
             <span className="mx-6 shrink-0 font-semibold text-fuchsia-300">
               Scene Wire
             </span>
 
-            {repeatedTicker.map((item, index) => (
+            {repeated.map((item, index) => (
               <div key={`${item}-${index}`} className="flex shrink-0 items-center">
-                <span className="mx-4 text-white/35">•</span>
-                <span className="shrink-0 text-white/85">{item}</span>
+                <span className="mx-4 text-white/25">•</span>
+                <span className="shrink-0">{item}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <header className="border-b border-white/10 bg-black/40 backdrop-blur">
+        <header className="border-b border-white/10 bg-[#070914]/95 backdrop-blur">
           <div className="mx-auto max-w-7xl px-4 py-5 md:px-6">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-              <div className="max-w-md">
-                <div className="text-2xl font-bold tracking-wide">
-                  Backstage Wire
-                </div>
-                <p className="mt-1 text-xs leading-5 text-white/50">
-                  Music culture from the other side of the curtain.
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-white/35">
+                  Est. Now
+                </p>
+                <Link href="/" className="mt-2 block text-3xl font-black tracking-[0.12em] text-white">
+                  BACKSTAGE WIRE
+                </Link>
+                <p className="mt-2 max-w-md text-sm leading-6 text-white/55">
+                  Music news and the culture around it.
                 </p>
               </div>
 
-              <nav className="flex flex-wrap gap-3 text-sm text-white/80 md:gap-4">
-                <a
+              <nav className="flex flex-wrap gap-3 text-sm">
+                <Link
                   href="/"
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
                 >
                   On Stage
-                </a>
-                <a
+                </Link>
+
+                <Link
                   href="/radar"
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
                 >
                   Backstage Radar
-                </a>
-                <a
+                </Link>
+
+                <Link
                   href="/dispatch"
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
                 >
                   Dispatch
-                </a>
-                <a
+                </Link>
+
+                <Link
                   href="/green-room"
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
                 >
                   Green Room
-                </a>
-                <a
+                </Link>
+
+                <Link
                   href="/new-drop"
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
                 >
                   New Drop
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
@@ -88,30 +96,35 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <footer className="mt-20 border-t border-white/10 bg-black/40">
-          <div className="mx-auto max-w-7xl px-4 py-10 text-sm text-white/60 md:px-6">
-            <p className="text-lg font-semibold text-white">Backstage Wire</p>
-            <p className="mt-2 max-w-xl leading-7">
-              Stories from the stage, the studio, and the spaces in between.
-              Independent music culture, emerging artists, and the moments shaping
-              what people listen to next.
-            </p>
+        <footer className="mt-20 border-t border-white/10 bg-[#05070f]">
+          <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <p className="text-lg font-semibold text-white">Backstage Wire</p>
+                <p className="mt-3 max-w-xl text-sm leading-7 text-white/55">
+                  Stories from the stage, the studio, and the spaces in between.
+                  Music discovery, pop culture, scene reports, and artists worth
+                  watching.
+                </p>
+              </div>
 
-            <div className="mt-6 flex flex-wrap gap-6 text-white/70">
-              <a href="#" className="hover:text-white">
-                Instagram
-              </a>
-              <a href="#" className="hover:text-white">
-                TikTok
-              </a>
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
+              <div className="md:text-right">
+                <div className="flex flex-wrap gap-5 text-sm text-white/60 md:justify-end">
+                  <a href="#" className="hover:text-white">
+                    Instagram
+                  </a>
+                  <a href="#" className="hover:text-white">
+                    TikTok
+                  </a>
+                  <a href="#" className="hover:text-white">
+                    Contact
+                  </a>
+                </div>
+                <p className="mt-6 text-xs text-white/35">
+                  © {new Date().getFullYear()} Backstage Wire
+                </p>
+              </div>
             </div>
-
-            <p className="mt-8 text-xs text-white/40">
-              © {new Date().getFullYear()} Backstage Wire
-            </p>
           </div>
         </footer>
       </body>
