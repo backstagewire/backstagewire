@@ -10,6 +10,7 @@ export type Story = {
   excerpt: string;
   body: string[];
   image: string;
+  authorSlug: string;
 };
 
 export const stories: Story[] = [
@@ -26,8 +27,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "jamie-calder",
   },
-
   {
     slug: "festival-season-is-back",
     section: "on-stage",
@@ -41,8 +42,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "rory-reed",
   },
-
   {
     slug: "why-music-biopics-are-dominating-pop-culture-again",
     section: "green-room",
@@ -56,14 +57,13 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "jordan-vale",
   },
-
   {
     slug: "the-releases-defining-this-week",
     section: "new-drop",
     title: "The Releases Defining This Week",
-    excerpt:
-      "Albums and singles shaping the sound of the moment.",
+    excerpt: "Albums and singles shaping the sound of the moment.",
     body: [
       "Every week brings a flood of new music, but a handful of releases usually define the conversation.",
       "This week’s standout tracks show artists leaning toward more intimate songwriting and experimental production.",
@@ -71,8 +71,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "casey-monroe",
   },
-
   {
     slug: "5-backstage-questions-with-japanese-breakfast",
     section: "dispatch",
@@ -86,8 +86,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "rory-reed",
   },
-
   {
     slug: "mk-gee-the-guitarist-redefining-modern-indie",
     section: "backstage-radar",
@@ -101,8 +101,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "jamie-calder",
   },
-
   {
     slug: "how-tiktok-is-reshaping-music-discovery",
     section: "green-room",
@@ -116,8 +116,8 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=1200&q=80",
+    authorSlug: "jordan-vale",
   },
-
   {
     slug: "vinyl-sales-hit-another-record-year",
     section: "on-stage",
@@ -131,5 +131,6 @@ export const stories: Story[] = [
     ],
     image:
       "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=1200&q=80",
-  }
+    authorSlug: "alex-mercer",
+  },
 ];
