@@ -27,7 +27,10 @@ export default function GreenRoomPage() {
                 style={{ backgroundImage: `url(${story.image})` }}
               />
               <div className="p-5">
-                <h2 className="text-xl font-semibold">{story.title}</h2>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-fuchsia-300">
+                  {story.section.replace("-", " ")}
+                </p>
+                <h2 className="mt-3 text-xl font-semibold">{story.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-white/65">{story.excerpt}</p>
               </div>
             </Link>
