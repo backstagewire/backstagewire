@@ -15,6 +15,13 @@ export default function ArticlePage({
   }
 
   const author = authors.find((item) => item.slug === story.authorSlug);
+  const relatedStories = stories
+    .filter(
+      (item) =>
+        item.slug !== story.slug &&
+        (item.section === story.section || item.authorSlug === story.authorSlug)
+    )
+    .slice(0, 3);
 
   return (
     <main className="bg-[#070914] text-white">
@@ -57,6 +64,47 @@ export default function ArticlePage({
           ))}
         </div>
       </article>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
+        <div className="border-t border-white/10 pt-12">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.28em] text-fuchsia-300">
+                Related Stories
+              </p>
+              <h2 className="mt-3 text-2xl font-bold text-white">
+                Keep reading
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {relatedStories.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/article/${item.slug}`}
+                className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:bg-white/10"
+              >
+                <div
+                  className="h-52 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                />
+                <div className="p-5">
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-fuchsia-300">
+                    {item.section.replace("-", " ")}
+                  </p>
+                  <h3 className="mt-3 text-xl font-semibold leading-tight text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-white/65">
+                    {item.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
