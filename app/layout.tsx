@@ -67,7 +67,7 @@ export default function RootLayout({
                   href="/dispatch"
                   className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
                 >
-                  Backstage Dispatch
+                  Dispatch
                 </a>
                 <a
                   href="/green-room"
