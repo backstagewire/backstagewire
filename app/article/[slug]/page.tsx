@@ -27,7 +27,7 @@ export default function ArticlePage({
     <main className="bg-[#070914] text-white">
       <article className="mx-auto max-w-4xl px-4 py-12 md:px-6">
         <div
-          className="h-[320px] w-full rounded-3xl bg-cover bg-center md:h-[420px]"
+          className="h-[320px] w-full rounded-3xl bg-cover bg-center md:h-[460px]"
           style={{ backgroundImage: `url(${story.image})` }}
         />
 
@@ -35,16 +35,18 @@ export default function ArticlePage({
           {story.section.replace("-", " ")}
         </p>
 
-        <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">
+        <h1 className="mt-4 text-4xl font-bold leading-tight text-white md:text-6xl">
           {story.title}
         </h1>
 
-        <p className="mt-4 text-lg leading-8 text-white/70">{story.excerpt}</p>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-white/70 md:text-xl md:leading-9">
+          {story.excerpt}
+        </p>
 
         {author && (
           <Link
             href={`/author/${author.slug}`}
-            className="mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+            className="mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:bg-white/[0.07]"
           >
             <div
               className="h-14 w-14 rounded-full bg-cover bg-center"
@@ -58,7 +60,7 @@ export default function ArticlePage({
           </Link>
         )}
 
-        <div className="mt-10 space-y-6 text-base leading-8 text-white/80">
+        <div className="mt-12 space-y-7 text-[17px] leading-8 text-white/80 md:text-lg md:leading-9">
           {story.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -67,15 +69,11 @@ export default function ArticlePage({
 
       <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
         <div className="border-t border-white/10 pt-12">
-          <div className="mb-8 flex items-end justify-between gap-4">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.28em] text-fuchsia-300">
-                Related Stories
-              </p>
-              <h2 className="mt-3 text-2xl font-bold text-white">
-                Keep reading
-              </h2>
-            </div>
+          <div className="mb-8">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-fuchsia-300">
+              Related Stories
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-white">Keep reading</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -83,7 +81,7 @@ export default function ArticlePage({
               <Link
                 key={item.slug}
                 href={`/article/${item.slug}`}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:bg-white/10"
+                className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] transition hover:bg-white/[0.07]"
               >
                 <div
                   className="h-52 bg-cover bg-center"
