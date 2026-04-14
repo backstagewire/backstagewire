@@ -89,12 +89,13 @@ export default function RootLayout({
                 >
                   New Drop
                 </Link>
+
                 <Link
-  href="/contributors"
-  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
->
-  Contributors
-</Link>
+                  href="/contributors"
+                  className="rounded-full border border-white/10 px-4 py-2 text-white/75 transition hover:border-fuchsia-400/40 hover:bg-white/5 hover:text-white"
+                >
+                  Contributors
+                </Link>
               </nav>
             </div>
           </div>
